@@ -3,6 +3,8 @@ var roughSVG = rough.svg(document.getElementById('svg'));
 var globalX=300
 var globalY=300
 
+
+
 const startSquare = roughSVG.rectangle(globalX,globalY,100,100,{
     fill: 'rgba(0,102,255,0.6)',
     fillStyle: 'zigzag-line'    
@@ -11,7 +13,11 @@ svg.appendChild(startSquare)
 
 
 function drawSquareDown(){
-    const line = roughSVG.line(globalX+50,globalY+100,globalX+50,globalY+120)
+    var StartX = globalX+50
+    var StartY = globalY+100
+    var endX = globalX+50
+    var endY = globalY+120
+    const line = roughSVG.line(globalX+50,StartY,endX,endY)
     svg.appendChild(line)
     globalY=globalY+120
     const square = roughSVG.rectangle(globalX,globalY,100,100,{
